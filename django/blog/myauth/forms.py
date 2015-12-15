@@ -4,19 +4,6 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 
-from django.conf import settings
-
-def signupdomain_validator(value):
-    if '*' not in settings.ALLOWED_SIGNUP_DOMAINS:
-        try:
-            domain = value[value.index("@"):]
-            if domain not in settings.ALLOWED_SIGNUP_DOMAINS:
-                raise ValidationError('''Invalid domain.Allowed domains on
-                    this network: {0}'''.format(','.join(settings.ALLOWED_SIGNUP_DOMAINS)))
-        except:
-            raise ValidationError('''Invalid domain.Allowed domains on
-                this network: {0}'''.format(','.join(settings.ALLOWED_SIGNUP_DOMAINS)))
-
 def forbidden_usernames_validator(value):
     forbidden_usernames = ['admin', 'settings', 'news', 'about', 'help', 'signin', 'signup',
         'signout', 'terms', 'privacy', 'cookie', 'new', 'login', 'logout', 'administrator',
@@ -74,7 +61,6 @@ class SignUpForm(forms.ModelForm):
         self.fields['username'].validators.append(invalid_username_validator)
         self.fields['username'].validators.append(unique_username_ignorecase_validator)
         self.fields['email'].validators.append(unique_email_validator)
-        self.fields['email'].validators.append(signupdomain_validator)
 
     def clean(self):
         super(SignUpForm, self).clean()
