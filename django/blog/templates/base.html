@@ -16,23 +16,41 @@
     <header>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{% url 'home' %}">hackctf</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'home' %}">hackctf</a>
+                </div>
                 <div class="collapse navbar-collapse" id="menu">
                     <ur class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="{% url 'logout' %}">{% trans 'Log out' %}</a>
+                            <a href="{% url 'profile' user.username %}">{{ user.profile.get_screen_name }}</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{% url 'setting' %}">{% trans 'Account Setting' %}</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'logout' %}">{% trans 'Log out' %}</a>
+                                </li>
+                            </ul>
                         </li>
                     </ur>
                 </div>
             </div>
         </nav>
     </header>
-    {% endblock %}
+    <main>
+    <div class="container">
+        {% block main %}
+        {% endblock main %}
+    </div>
+    {% endblock body %}
 </body>
 </html>

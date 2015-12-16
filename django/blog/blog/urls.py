@@ -21,6 +21,9 @@ urlpatterns = [
     url(r'^login', 'django.contrib.auth.views.login', {'template_name':'core/cover.html'} , name='login'),
     url(r'^logout', 'django.contrib.auth.views.logout', {'next_page':'/'} , name='logout'),
     url(r'^signup/$', 'myauth.views.signup', name='signup'),
+    url(r'setting/$', 'core.views.setting', name='setting'),
+    url(r'setting/picture/$', 'core.views.picture', name='picture'),
+    url(r'setting/password/$', 'core.views.password', name='password'),
 
     url(r'^admin/', include(admin.site.urls)),
 ]
