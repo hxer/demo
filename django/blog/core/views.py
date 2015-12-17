@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -23,16 +23,16 @@ def setting(request):
             user.profile.url = form.cleaned_data.get('url')
             user.profile.location = form.cleaned_data.get('location')
             user.save()
-            mesages.add_message(request, messages.SUCCESS, 'Your profile were successfully edited.')
-        else:
-            form = ProfileForm(
-                instance=user,
-                initial={
-                    'url': user.profile.url,
-                    'location': user.profile.location
-                }
-            )
-        return render(request, 'core/setting.html', {'form':form})
+            messages.add_message(request, messages.SUCCESS, 'Your profile were successfully edited.')
+    else:
+        form = ProfileForm(
+            instance=user,
+            initial={
+                'url': user.profile.url,
+                'location': user.profile.location
+            }
+        )
+    return render(request, 'core/setting.html', {'form':form})
 
 @login_required
 def picture(request):
@@ -41,3 +41,8 @@ def picture(request):
 @login_required
 def password(request):
     return render(request, 'core/setting.html')
+
+@login_required
+def profile(request, username):
+    page_user = get_object_or_404(User, username=username)
+    return render(request, 'core/profile.html',{'page_user':page_user,'page':1})

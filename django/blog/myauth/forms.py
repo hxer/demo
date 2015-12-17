@@ -44,10 +44,10 @@ class SignUpForm(forms.ModelForm):
         label="Confirm your password",
         required=True
     )
-    email = forms.CharField(
+    email = forms.EmailField(
         widget=forms.EmailInput(attrs={'class':'form-control'}),
         required=True,
-        max_length=75
+        max_length=254,
     )
 
     class Meta:

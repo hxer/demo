@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'setting/$', 'core.views.setting', name='setting'),
     url(r'setting/picture/$', 'core.views.picture', name='picture'),
     url(r'setting/password/$', 'core.views.password', name='password'),
-
+    url(r'(?P<username>[^/]+)/$', 'core.views.profile', name='profile'),
     url(r'^admin/', include(admin.site.urls)),
 ]

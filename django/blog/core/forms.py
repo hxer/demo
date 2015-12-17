@@ -14,9 +14,9 @@ class ProfileForm(forms.ModelForm):
         max_length=30,
         required=False,
     )
-    email = forms.CharField(
-        widget=forms.TextInput(attrs={'class':'form-control'}),
-        max_length=50,
+    email = forms.EmailField(
+        widget=forms.EmailInput(attrs={'class':'form-control'}),
+        max_length=254,
         required=False,
     )
     url = forms.CharField(
@@ -37,8 +37,7 @@ class ProfileForm(forms.ModelForm):
     def full_clean(self):
         'strip whitespace automatically in all form fields'
         data = self.data.copy()
-        for k, vs in self.data.lists():
-            new_vs = [v.strip() for v in vs]
-            data.setlist(k, new_vs)
+        for k, vs in self.data.items():
+            data[k] = vs.strip()
         self.data = data
         super(ProfileForm, self).full_clean()

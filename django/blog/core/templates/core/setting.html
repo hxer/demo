@@ -25,7 +25,7 @@ Account setting
             {% endfor %}
         {% endif %}
         <h3 style="margin-top: 0">{% trans 'Edit Profile' %}</h3>
-        <form class="form-horizontal" method="post" action="{% url 'setting %}">
+        <form class="form-horizontal" method="post" action="{% url 'setting' %}">
             {% csrf_token %}
             {% for field in form.visible_fields %}
                 <div class="form-group{% if field.errors %} has-error {% endif %}">
@@ -43,7 +43,7 @@ Account setting
             {% endfor %}
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">{% trans save %}</button>
+                    <button type="submit" class="btn btn-primary">{% trans 'save' %}</button>
                 </div>
             </div>
         </form>
