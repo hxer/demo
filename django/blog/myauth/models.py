@@ -7,7 +7,7 @@ from django.conf import settings
 import os.path
 
 """Fix
-[1] function get_picture use http://trybootcamp.vitorfs.com/static/img/user.png,
+[1] function get_picture use http://...,
     change it for you need
 """
 class Profile(models.Model):
@@ -20,14 +20,17 @@ class Profile(models.Model):
             "https://" not in self.url else self.url
 
     def get_picture(self):
-        no_picture = "http://trybootcamp.vitorfs.com/static/img/user.png"
+        no_picture = "https://github.com/hxer/personal/blob/master/simple.jpg"
         try:
             filename = os.path.join(settings.MEDIA_ROOT, 'profile_pictures') + \
                 self.user.username + '.jpg'
-            picture_url = settings.MEDIA_URL + 'profile_pictures' + \
+            picture_url = settings.MEDIA_URL + 'profile_pictures/' + \
                 self.user.username + '.jpg'
             if os.path.isfile(filename):
                 return picture_url
+            elif os.path.isfile(settings.MEDIA_ROOT+'simple.jpg'):
+                print(settings.MEDIA_ROOT, settings.MEDIA_URL)
+                return settings.MEDIA_URL + 'simple.jpg'
         except:
             return no_picture
 

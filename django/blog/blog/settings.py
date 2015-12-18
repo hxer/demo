@@ -112,6 +112,6 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/').replace('\\', '/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/').replace('\\', '/') #must absolute path
 
 LOGIN_REDIRECT_URL = '/'

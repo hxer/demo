@@ -36,6 +36,11 @@ def setting(request):
 
 @login_required
 def picture(request):
+    upload_picture = True if request.GET.get('upload_picture')=='upload' else False
+    return render(request, 'core/picture.html', {'upload_picture': upload_picture})
+
+@login_required
+def upload_picture(request):
     return render(request, 'core/setting.html')
 
 @login_required

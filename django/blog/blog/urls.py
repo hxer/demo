@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', 'core.views.home', name='home'),
@@ -23,7 +25,8 @@ urlpatterns = [
     url(r'^signup/$', 'myauth.views.signup', name='signup'),
     url(r'setting/$', 'core.views.setting', name='setting'),
     url(r'setting/picture/$', 'core.views.picture', name='picture'),
+    url(r'setting/picture/upload_picture$', 'core.views.upload_picture', name='upload_picture'),
     url(r'setting/password/$', 'core.views.password', name='password'),
     url(r'(?P<username>[^/]+)/$', 'core.views.profile', name='profile'),
     url(r'^admin/', include(admin.site.urls)),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
