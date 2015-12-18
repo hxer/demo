@@ -29,4 +29,4 @@ urlpatterns = [
     url(r'setting/password/$', 'core.views.password', name='password'),
     url(r'(?P<username>[^/]+)/$', 'core.views.profile', name='profile'),
     url(r'^admin/', include(admin.site.urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
