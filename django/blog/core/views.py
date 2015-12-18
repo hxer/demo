@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from core.forms import ProfileForm
+from core.forms import ProfileForm, ChangePasswordForm
 
 def home(request):
     if request.user.is_authenticated():
@@ -45,7 +45,17 @@ def upload_picture(request):
 
 @login_required
 def password(request):
-    return render(request, 'core/setting.html')
+    user = request.user
+    if request.method == 'POST':
+        form = ChangePasswordForm(request.POST)
+        if form.is_valid():
+            user.password = form.cleaned_data.get('new_password')
+            user.set_password(password)
+            user.save()
+            messages.add_message(request, messages.SUCCESS, 'Your password were successfully changed')
+    else:
+        form = ChangePasswordForm(instance=user)
+    return render(request, 'core/password.html', {'form':form})
 
 @login_required
 def profile(request, username):

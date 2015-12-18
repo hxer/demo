@@ -29,7 +29,6 @@ class Profile(models.Model):
             if os.path.isfile(filename):
                 return picture_url
             elif os.path.isfile(settings.MEDIA_ROOT+'simple.jpg'):
-                print(settings.MEDIA_ROOT, settings.MEDIA_URL)
                 return settings.MEDIA_URL + 'simple.jpg'
         except:
             return no_picture

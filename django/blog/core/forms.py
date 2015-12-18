@@ -41,3 +41,40 @@ class ProfileForm(forms.ModelForm):
             data[k] = vs.strip()
         self.data = data
         super(ProfileForm, self).full_clean()
+
+class ChangePasswordForm(forms.ModelForm):
+    """
+    """
+    old_password = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        required=True,
+        label="Old password",
+    )
+    new_password = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        required=True,
+        label="New password",
+    )
+    confirm_newpassword = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        required=True,
+        label="Confirm new password"
+    )
+
+    class Meta:
+        model = User
+        fields = ['old_password', 'new_password', 'confirm_newpassword']
+
+    def clean(self):
+        super(ChangePassword, self).clean()
+        old_password = self.cleaned_data.get('old_password')
+        new_password = self.cleaned_data.get('new_password')
+        confirm_newpassword = self.cleaned_data.get('confirm_ewpassword')
+        uid = self.cleaned_data.get('id')
+        user = User.objects.get(pk=uid)
+        if not user.check_password(old_password):
+            self._errors['password'] = self.error_class(['Old passwords don\'t match'])
+        if new_password and new_password != confirm_newpassword:
+            self._errors['password'] = self.error_class(['New passwords don\'t match'])
+        return self.cleaned_data
+
