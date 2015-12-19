@@ -32,6 +32,39 @@
             </form>
 
             {% if upload_picture %}
+            <form method="post" action="{% url 'save_uploaded_picture' %}">
+                {% csrf_token %}
+                <div class="modal fade" id="modal-upload-picture">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">{% trans 'Crop Picture' %}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="select-picture">
+                                    <p>{% trans 'Crop the profile picture and then click on the' %} <strong>{% trans 'Save Picture' %}</strong>{% trans 'button' %}</p>
+                                    <img src="{{ MEDIA_URL }}profile_pictures/{{ user.username }}_tmp.jpg?_={% now 'U' %}" id="crop-picture">
+                                    <input type="hidden" id="x" name="x"/>
+                                    <input type="hidden" id="y" name="y"/>
+                                    <input type="hidden" id="w" name="w"/>
+                                    <input type="hidden" id="h" name="h"/>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function (){
+                                        $("#modal-upload-picture").modal();
+                                        window.history.pushState("", "", "/setting/picture/");
+                                    });
+                                </script>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Close' %}</button>
+                                <button type="submit" class="btn btn-primary">{% trans 'Save changes %}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
             {% endif %}
         </div>
     </div>
