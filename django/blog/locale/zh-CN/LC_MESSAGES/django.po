@@ -19,33 +19,33 @@ msgstr ""
 
 #: core/templates/core/cover.html:22 core/templates/core/cover.html.py:40
 msgid "Log in"
-msgstr ""
+msgstr "登录"
 
 #: core/templates/core/cover.html:26
 msgid "Username"
-msgstr ""
+msgstr "用户名"
 
 #: core/templates/core/cover.html:33
 #: core/templates/core/partial_setting_menu.html:5
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: core/templates/core/cover.html:41 myauth/templates/myauth/signup.html:12
 msgid "Sign up for HackCTF"
-msgstr ""
+msgstr "注册"
 
 #: core/templates/core/partial_setting_menu.html:3
 msgid "Profile"
-msgstr ""
+msgstr "用户资料"
 
 #: core/templates/core/partial_setting_menu.html:4
 msgid "Picture"
-msgstr ""
+msgstr "图片"
 
 #: core/templates/core/password.html:6 core/templates/core/picture.html:6
 #: templates/base.html:37
 msgid "Account Setting"
-msgstr ""
+msgstr "用户设置"
 
 #: core/templates/core/password.html:11 core/templates/core/picture.html:17
 msgid "Accout Setting"
@@ -53,56 +53,56 @@ msgstr ""
 
 #: core/templates/core/password.html:26
 msgid "Change Password"
-msgstr ""
+msgstr "修改密码"
 
 #: core/templates/core/password.html:46 core/templates/core/setting.html:46
 msgid "save"
-msgstr ""
+msgstr "保存"
 
 #: core/templates/core/picture.html:32
 msgid "Change Picture"
-msgstr ""
+msgstr "修改头像"
 
 #: core/templates/core/picture.html:37
 msgid "Upload new picture"
-msgstr ""
+msgstr "上传头像"
 
 #: core/templates/core/picture.html:48
 msgid "Crop Picture"
-msgstr ""
+msgstr "裁剪图片"
 
 #: core/templates/core/picture.html:52
 msgid "Crop the profile picture and then click on the"
-msgstr ""
+msgstr "裁剪用户头像，双击"
 
 #: core/templates/core/picture.html:52
 msgid "Save Picture"
-msgstr ""
+msgstr "保存图片"
 
 #: core/templates/core/picture.html:52
 msgid "button"
-msgstr ""
+msgstr "按钮"
 
 #: core/templates/core/picture.html:67
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: core/templates/core/picture.html:68
 msgid "Save changes"
-msgstr ""
+msgstr "保存修改"
 
 #: core/templates/core/setting.html:12
 msgid "Account Setting "
-msgstr ""
+msgstr "用户设置"
 
 #: core/templates/core/setting.html:27
 msgid "Edit Profile"
-msgstr ""
+msgstr "编辑资料"
 
 #: myauth/templates/myauth/signup.html:27
 msgid "Create an account"
-msgstr ""
+msgstr "新建用户"
 
 #: templates/base.html:40
 msgid "Log out"
-msgstr ""
+msgstr "登出"
