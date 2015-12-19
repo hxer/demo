@@ -6,6 +6,12 @@
     {% trans 'Account Setting' %}
 {% endblock %}
 
+{% block head %}
+  <link href="{% static 'css/jquery.Jcrop.min.css' %}" rel="stylesheet">
+  <script src="{% static 'js/jquery.Jcrop.min.js' %}"></script>
+  <script src="{% static 'core/js/picture.js' %}"></script>
+{% endblock %}
+
 {% block main %}
     <div class="page-header">
         <h1>{% trans 'Accout Setting' %}</h1>
@@ -59,7 +65,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Close' %}</button>
-                                <button type="submit" class="btn btn-primary">{% trans 'Save changes %}</button>
+                                <button type="submit" class="btn btn-primary">{% trans 'Save changes' %}</button>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -52,15 +54,15 @@ def upload_picture(request):
     try:
         if request.method == 'POST':
             profile_picture = os.path.join(settings.MEDIA_ROOT, 'profile_pictures/')
-            if not os.path.exists(profile_pictures):
-                os.mkdirs(profile_pictures)
-            imgfile = request.FILE['picture']
-            filename = profile_pictures + request.user.username + "_tmp.jpg"
+            if not os.path.exists(profile_picture):
+                os.makedirs(profile_picture)
+            imgfile = request.FILES['picture']
+            filename = profile_picture + request.user.username + "_tmp.jpg"
             with open(filename, "wb+") as f:
                 for chunk in imgfile.chunks():
                     f.write(chunk)
             im = Image.open(filename)
-            width, height im.size
+            width, height = im.size
             if width > 350:
                 new_width = 350
                 new_height = (height*350)/width
@@ -70,7 +72,8 @@ def upload_picture(request):
             return redirect('/setting/picture/?upload_picture=uploaded')
         else:
             return redirect('/setting/picture/')
-    except:
+    except Exception as e:
+        print(e)
         return redirect('/setting/picture/')
 
 @login_required
@@ -85,12 +88,12 @@ def save_uploaded_picture(request):
         filename = os.path.join(settings.MEDIA_ROOT, 'profile_pictures/') + \
             request.user.username + '.jpg'
         im = Image.open(tmp_filename)
-        cropped_im = im.crop(x, y, w+x, w+y)
+        cropped_im = im.crop((x, y, w+x, h+y))
         cropped_im.thumbnail((200,200), Image.ANTIALIAS)
         cropped_im.save(filename)
         os.remove(tmp_filename)
-    except:
-        pass
+    except Exception as e:
+        print(e)
     return redirect('/setting/picture/')
 
 @login_required

@@ -22,7 +22,7 @@ class Profile(models.Model):
     def get_picture(self):
         no_picture = "https://github.com/hxer/personal/blob/master/simple.jpg"
         try:
-            filename = os.path.join(settings.MEDIA_ROOT, 'profile_pictures') + \
+            filename = os.path.join(settings.MEDIA_ROOT, 'profile_pictures/') + \
                 self.user.username + '.jpg'
             picture_url = settings.MEDIA_URL + 'profile_pictures/' + \
                 self.user.username + '.jpg'

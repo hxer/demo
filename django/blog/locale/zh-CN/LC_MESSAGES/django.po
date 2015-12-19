@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-19 17:11+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: core/templates/core/cover.html:22 core/templates/core/cover.html.py:40
+msgid "Log in"
+msgstr ""
+
+#: core/templates/core/cover.html:26
+msgid "Username"
+msgstr ""
+
+#: core/templates/core/cover.html:33
+#: core/templates/core/partial_setting_menu.html:5
+msgid "Password"
+msgstr ""
+
+#: core/templates/core/cover.html:41 myauth/templates/myauth/signup.html:12
+msgid "Sign up for HackCTF"
+msgstr ""
+
+#: core/templates/core/partial_setting_menu.html:3
+msgid "Profile"
+msgstr ""
+
+#: core/templates/core/partial_setting_menu.html:4
+msgid "Picture"
+msgstr ""
+
+#: core/templates/core/password.html:6 core/templates/core/picture.html:6
+#: templates/base.html:37
+msgid "Account Setting"
+msgstr ""
+
+#: core/templates/core/password.html:11 core/templates/core/picture.html:17
+msgid "Accout Setting"
+msgstr ""
+
+#: core/templates/core/password.html:26
+msgid "Change Password"
+msgstr ""
+
+#: core/templates/core/password.html:46 core/templates/core/setting.html:46
+msgid "save"
+msgstr ""
+
+#: core/templates/core/picture.html:32
+msgid "Change Picture"
+msgstr ""
+
+#: core/templates/core/picture.html:37
+msgid "Upload new picture"
+msgstr ""
+
+#: core/templates/core/picture.html:48
+msgid "Crop Picture"
+msgstr ""
+
+#: core/templates/core/picture.html:52
+msgid "Crop the profile picture and then click on the"
+msgstr ""
+
+#: core/templates/core/picture.html:52
+msgid "Save Picture"
+msgstr ""
+
+#: core/templates/core/picture.html:52
+msgid "button"
+msgstr ""
+
+#: core/templates/core/picture.html:67
+msgid "Close"
+msgstr ""
+
+#: core/templates/core/picture.html:68
+msgid "Save changes"
+msgstr ""
+
+#: core/templates/core/setting.html:12
+msgid "Account Setting "
+msgstr ""
+
+#: core/templates/core/setting.html:27
+msgid "Edit Profile"
+msgstr ""
+
+#: myauth/templates/myauth/signup.html:27
+msgid "Create an account"
+msgstr ""
+
+#: templates/base.html:40
+msgid "Log out"
+msgstr ""
