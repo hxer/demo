@@ -53,6 +53,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'blog.urls'
@@ -103,11 +104,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOCALE_PATHS = os.path.join(BASE_DIR, 'locale/')
+LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale/'),)
 
 
 LANGUAGES = [
-    ('zh-CN', _('Chinese')),
+    ('zh-hans', _('Simplified Chinese')),
     ('en', _('English')),
 ]
 # Static files (CSS, JavaScript, Images)

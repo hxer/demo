@@ -55,3 +55,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#sqlite3
+*.sqlite3
+
+#migrations下所有文件
+migrations/

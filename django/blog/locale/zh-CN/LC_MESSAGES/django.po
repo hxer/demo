@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-19 17:11+0800\n"
+"POT-Creation-Date: 2015-12-20 16:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: blog/settings.py:111
+msgid "Simplified Chinese"
+msgstr ""
+
+#: blog/settings.py:112
+msgid "English"
+msgstr ""
 
 #: core/templates/core/cover.html:22 core/templates/core/cover.html.py:40
 msgid "Log in"
@@ -30,7 +38,7 @@ msgstr "用户名"
 msgid "Password"
 msgstr "密码"
 
-#: core/templates/core/cover.html:41 myauth/templates/myauth/signup.html:12
+#: core/templates/core/cover.html:41 myauth/templates/myauth/signup.html:13
 msgid "Sign up for HackCTF"
 msgstr "注册"
 
@@ -43,19 +51,19 @@ msgid "Picture"
 msgstr "图片"
 
 #: core/templates/core/password.html:6 core/templates/core/picture.html:6
-#: templates/base.html:37
+#: core/templates/core/picture.html:17 templates/base.html:37
 msgid "Account Setting"
 msgstr "用户设置"
 
-#: core/templates/core/password.html:11 core/templates/core/picture.html:17
+#: core/templates/core/password.html:11
 msgid "Accout Setting"
-msgstr ""
+msgstr "用户设置"
 
 #: core/templates/core/password.html:26
 msgid "Change Password"
 msgstr "修改密码"
 
-#: core/templates/core/password.html:46 core/templates/core/setting.html:46
+#: core/templates/core/password.html:46 core/templates/core/setting.html:48
 msgid "save"
 msgstr "保存"
 
@@ -91,15 +99,15 @@ msgstr "关闭"
 msgid "Save changes"
 msgstr "保存修改"
 
-#: core/templates/core/setting.html:12
+#: core/templates/core/setting.html:14
 msgid "Account Setting "
 msgstr "用户设置"
 
-#: core/templates/core/setting.html:27
+#: core/templates/core/setting.html:29
 msgid "Edit Profile"
 msgstr "编辑资料"
 
-#: myauth/templates/myauth/signup.html:27
+#: myauth/templates/myauth/signup.html:28
 msgid "Create an account"
 msgstr "新建用户"
 
