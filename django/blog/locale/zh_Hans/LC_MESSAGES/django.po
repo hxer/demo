@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-20 16:17+0800\n"
+"POT-Creation-Date: 2015-12-20 18:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: blog/settings.py:111
+#: blog/settings.py:112
 msgid "Simplified Chinese"
 msgstr ""
 
-#: blog/settings.py:112
+#: blog/settings.py:113
 msgid "English"
 msgstr ""
 
@@ -38,7 +38,7 @@ msgstr "用户名"
 msgid "Password"
 msgstr "密码"
 
-#: core/templates/core/cover.html:41 myauth/templates/myauth/signup.html:13
+#: core/templates/core/cover.html:41 myauth/templates/myauth/signup.html:14
 msgid "Sign up for HackCTF"
 msgstr "注册"
 
@@ -48,10 +48,10 @@ msgstr "用户资料"
 
 #: core/templates/core/partial_setting_menu.html:4
 msgid "Picture"
-msgstr "图片"
+msgstr "头像"
 
 #: core/templates/core/password.html:6 core/templates/core/picture.html:6
-#: core/templates/core/picture.html:17 templates/base.html:37
+#: core/templates/core/picture.html:17 templates/base.html:38
 msgid "Account Setting"
 msgstr "用户设置"
 
@@ -107,10 +107,10 @@ msgstr "用户设置"
 msgid "Edit Profile"
 msgstr "编辑资料"
 
-#: myauth/templates/myauth/signup.html:28
+#: myauth/templates/myauth/signup.html:29
 msgid "Create an account"
 msgstr "新建用户"
 
-#: templates/base.html:40
+#: templates/base.html:41
 msgid "Log out"
-msgstr "登出"
+msgstr "注销"
