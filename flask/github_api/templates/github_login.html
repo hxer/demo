@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Inject</title>
+</head>
+<body>
+    <div>
+        <a href="{{ url }}">
+            <img src="https://developer.github.com/assets/images/status-icon-good.png" />
+        </a>
+    </div>
+    <div>
+        login
+    </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

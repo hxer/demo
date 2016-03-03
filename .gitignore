@@ -61,3 +61,5 @@ target/
 
 #migrations下所有文件
 migrations/
+
+.ropeproject/

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>user info</title>
+</head>
+<body>
+<ul>
+    {% for key in info.keys() %}
+        <li>{{ "{key}: {value}".format(key=key, value=info[key]) }}</li>
+    {% endfor %}
+</ul>
+<div>
+    <a href="{{ url }}">logout</a>
+</div>
+</body>
+</html>
