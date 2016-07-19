@@ -1,0 +1,20 @@
+{% extends 'demo/base.html' %}
+{% load staticfiles %}
+{% block links %}
+    <link href="{% static 'demo/css/create.css' %}" rel='stylesheet' type='text/css'>
+{% endblock links %}
+{% block title %}{{ post.title }}{% endblock title%}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 well well-sm">
+            <legend><a href=""><i class="glyphicon glyphicon-globe"></i></a> Post</legend>
+            <form action="{% url 'update' id=post.id %}" method="post" class="form" role="form">
+                {% csrf_token %}
+                <input class="form-control" name="title" type="text" value="{{ post.title }}"/>
+                <textarea name="content" id="message" class="form-control" rows="12" cols="25" required="required">{{ post.content }}</textarea>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Update Post</button>
+            </form>
+        </div>
+    </div>
+{% endblock body %}

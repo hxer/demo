@@ -1,0 +1,27 @@
+{% extends 'demo/base.html' %}
+{% load staticfiles %}
+{% block links %}
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href="{% static 'demo/css/post.css' %}" rel='stylesheet' type='text/css'>
+{% endblock links %}
+{% block title %}{{ post.title }}{% endblock title %}
+{% block body %}
+<div class="container col-lg-12 main">
+    <div class="col-lg-12 post">
+            <div class="container">
+                <h2><a href="" class="ubuntu">{{ post.title }}</a></h2>
+                <div class="body-text">
+                    <p class='text-muted ubuntu'>By {{ post.author }} | {{ post.last_update |date:"Y /m /d" }}</p>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>{{ post.content }}</p>
+                        </div>
+                    </div>
+                </div>
+         </div>
+    </div>
+</div>
+{% endblock body %}
