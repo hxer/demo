@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{% static 'account/bootstrap/css/bootstrap.min.css' %}" rel='stylesheet' type='text/css'>
+        <link href="{% static 'account/font-awesome/css/font-awesome.min.css' %}" rel='stylesheet' type='text/css'>
+        {% block links %} {% endblock %}
+        <title>{% block title %}Demo{% endblock %}</title>
+    </head>
+    <body>
+    {% block nav %} {% endblock %}
+    {% block main %} {% endblock %}
+    </body>
+    <script src="{% static 'account/js/jquery.min.js' %}"></script> 
+    <script src="{% static 'account/bootstrap/js/bootstrap.min.js' %}"></script> 
+    {% block script %} {% endblock %}
+</html>
+
