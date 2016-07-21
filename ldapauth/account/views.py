@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 
 
-@login_required(login_url="/account/login/")
+@login_required()
 def home(request):
     return HttpResponse('hi')
 
