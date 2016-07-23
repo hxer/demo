@@ -14,7 +14,7 @@ pip install mongoengine
 
 使用前确保`mongodb`服务已经开启，然后运行`pyton manage.py runserver`,访问 [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## uswgi + nginx + supervisor 部署
+## uwsgi + nginx + supervisor 部署
 
 ### virtualenv
 
@@ -39,9 +39,9 @@ pip install uwsgi
 
 sudo cp -R ~/.virtualenvs/mongodemo/* /data/site/env/
 ```
-### uswgi
+### uwsgi
 
-install: `sudo apt-get install python-dev, pip install uswgi`
+install: `sudo apt-get install python-dev, pip install uwsgi`
 
 写`ini`配置文件`uwsgi8899.ini`.
 
