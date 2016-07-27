@@ -52,7 +52,7 @@ project = secondsite
 base = /home/user
 
 chdir = %(base)/%(project)
-home = %(base)/Env/%(project)
+home = %(base)/envs/%(project)
 module = %(project).wsgi:application
 
 master = true
@@ -72,6 +72,16 @@ add-apt-repository ppa:nginx/$nginx
 apt-get update
 apt-get install nginx
 ```
+
+`nginx.conf`配置文件中可以自定义变量,通过设置项目路径可以方便在多个项目中修改,如下所示：
+
+```
+Syntax:	set $variable value;
+Default:	—
+Context:	server, location, if
+```
+
+设置自定义变量只能在 `server,location,if` 上下文环境中, 否则会报错
 
 本目录下`ngnix.conf`替换掉`/etc/nginx/nginx.conf`文件，重启`ngnix服务`
 
@@ -111,4 +121,4 @@ connect (optional): if True (the default), immediately begin connecting to Mongo
 
 * supervisor log
 
-supervisord.conf 文件中配置`.log`和`.sock`的文件目录，执行supervisord的用户必须有读写的权限，参考方式为：`chown -R user/user /data/log`.
+supervisord.conf 文件中配置`.log`和`.sock`的文件目录，执行supervisord的用户必须有读写的权限，参考方式为：`chown -R user:user /data/log`.
