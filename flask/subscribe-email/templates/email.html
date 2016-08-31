@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block links %} 
+<link href="{{ url_for('static', filename='css/email.css') }}" rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block main %}
+<section>
+<div class="container">
+    <div class="row">
+        {% if  url_for('unsubscribe') == request.path %}
+            <h2> Unsubscribe Email</h2>
+        {% else %}
+            <h2> Subscribe Email</h2>
+        {% endif %}
+        <br>
+        <div class="col-sm-offset-4 col-sm-4">
+            <form method="post" action="{{ url_for('subscribe') }}">
+				<div class="form-group">
+					<div class="input-group" data-validate="email">
+						<input type="text" class="form-control" name="email" id="validate-email" placeholder="Your Email Only" required>
+						<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+					</div>
+				</div>
+                <button type="submit" class="btn btn-primary col-xs-12" disabled>Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+{% endblock %}
+
+
+{% block script %} 
+<script src="{{ url_for('static', filename='js/email.js') }}"></script> 
+{% endblock %}

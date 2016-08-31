@@ -1,10 +1,14 @@
-# Demo
+# demo
 
 some demos
 
 ## flask/github_api
 
 Github api login with Flask.
+
+## flask/subscribe-email
+
+simple email subscription
 
 ## django/blog
 
