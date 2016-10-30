@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-20 18:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blog/settings.py:112
+msgid "Simplified Chinese"
+msgstr ""
+
+#: blog/settings.py:113
+msgid "English"
+msgstr ""
+
+#: core/templates/core/cover.html:22 core/templates/core/cover.html.py:40
+msgid "Log in"
+msgstr "登录"
+
+#: core/templates/core/cover.html:26
+msgid "Username"
+msgstr "用户名"
+
+#: core/templates/core/cover.html:33
+#: core/templates/core/partial_setting_menu.html:5
+msgid "Password"
+msgstr "密码"
+
+#: core/templates/core/cover.html:41 myauth/templates/myauth/signup.html:14
+msgid "Sign up for HackCTF"
+msgstr "注册"
+
+#: core/templates/core/partial_setting_menu.html:3
+msgid "Profile"
+msgstr "用户资料"
+
+#: core/templates/core/partial_setting_menu.html:4
+msgid "Picture"
+msgstr "头像"
+
+#: core/templates/core/password.html:6 core/templates/core/picture.html:6
+#: core/templates/core/picture.html:17 templates/base.html:38
+msgid "Account Setting"
+msgstr "用户设置"
+
+#: core/templates/core/password.html:11
+msgid "Accout Setting"
+msgstr "用户设置"
+
+#: core/templates/core/password.html:26
+msgid "Change Password"
+msgstr "修改密码"
+
+#: core/templates/core/password.html:46 core/templates/core/setting.html:48
+msgid "save"
+msgstr "保存"
+
+#: core/templates/core/picture.html:32
+msgid "Change Picture"
+msgstr "修改头像"
+
+#: core/templates/core/picture.html:37
+msgid "Upload new picture"
+msgstr "上传头像"
+
+#: core/templates/core/picture.html:48
+msgid "Crop Picture"
+msgstr "裁剪图片"
+
+#: core/templates/core/picture.html:52
+msgid "Crop the profile picture and then click on the"
+msgstr "裁剪用户头像，双击"
+
+#: core/templates/core/picture.html:52
+msgid "Save Picture"
+msgstr "保存图片"
+
+#: core/templates/core/picture.html:52
+msgid "button"
+msgstr "按钮"
+
+#: core/templates/core/picture.html:67
+msgid "Close"
+msgstr "关闭"
+
+#: core/templates/core/picture.html:68
+msgid "Save changes"
+msgstr "保存修改"
+
+#: core/templates/core/setting.html:14
+msgid "Account Setting "
+msgstr "用户设置"
+
+#: core/templates/core/setting.html:29
+msgid "Edit Profile"
+msgstr "编辑资料"
+
+#: myauth/templates/myauth/signup.html:29
+msgid "Create an account"
+msgstr "新建用户"
+
+#: templates/base.html:41
+msgid "Log out"
+msgstr "注销"
